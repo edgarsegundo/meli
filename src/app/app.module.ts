@@ -22,14 +22,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { InputSearchComponent } from './input-search/input-search.component';
 
-
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { InterceptorService } from './loader/interceptor.service';
+import { InterceptorService } from './shared/services/interceptor.service';
 import { AboutComponent } from './about/about.component';
 import { ComparatorComponent } from './comparator/comparator.component';
 
@@ -60,6 +60,7 @@ import { ComparatorComponent } from './comparator/comparator.component';
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
+    MatSnackBarModule,
     ScrollingModule,
     FormsModule
   ],
