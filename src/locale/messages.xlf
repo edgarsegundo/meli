@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="comparatorTitleToolbar" datatype="html">
+        <source>Product Comparison</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Title for the comparator page</note>
+        <note priority="1" from="meaning">Title Toolbar</note>
+      </trans-unit>
+      <trans-unit id="compareButton" datatype="html">
+        <source>Compare </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+        <note priority="1" from="description">Button for selecting to compare</note>
+        <note priority="1" from="meaning">Button</note>
+      </trans-unit>
+      <trans-unit id="itemLabel" datatype="html">
+        <source>ITEM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <note priority="1" from="description">Label to indicate the item was selected</note>
+        <note priority="1" from="meaning">Label</note>
+      </trans-unit>
+      <trans-unit id="selectedLabel" datatype="html">
+        <source>SELECTED</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <note priority="1" from="description">Label to indicate the item was selected</note>
+        <note priority="1" from="meaning">Label</note>
+      </trans-unit>
+      <trans-unit id="warningNoItemsSelected" datatype="html">
+        <source> No item selected for comparison </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">65,67</context>
+        </context-group>
+        <note priority="1" from="description">Warning when there are no items selected</note>
+        <note priority="1" from="meaning">Warning Text</note>
+      </trans-unit>
+      <trans-unit id="comparisonTableTitle" datatype="html">
+        <source>Features</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+        <note priority="1" from="description">Title for comparison table</note>
+        <note priority="1" from="meaning">Table Title</note>
+      </trans-unit>
+      <trans-unit id="tableFieldNameHeaderFeature" datatype="html">
+        <source>Feature</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+        <note priority="1" from="description">Field Name for comparion Table</note>
+        <note priority="1" from="meaning">Table Header</note>
+      </trans-unit>
+      <trans-unit id="tableFieldNameHeaderItem1" datatype="html">
+        <source>ITEM 1</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <note priority="1" from="description">Field Name for comparion Table</note>
+        <note priority="1" from="meaning">Table Header</note>
+      </trans-unit>
+      <trans-unit id="tableFieldNameHeaderItem2" datatype="html">
+        <source>ITEM 2</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+        <note priority="1" from="description">Field Name for comparion Table</note>
+        <note priority="1" from="meaning">Table Header</note>
+      </trans-unit>
+      <trans-unit id="featureDataLabel" datatype="html">
+        <source>Feature</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+        <note priority="1" from="description">Displaying the feature Label</note>
+        <note priority="1" from="meaning">Data Label</note>
+      </trans-unit>
+      <trans-unit id="Item1DataLabel" datatype="html">
+        <source>ITEM 1</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+        <note priority="1" from="description">Displaying the item1 Label</note>
+        <note priority="1" from="meaning">Data Label</note>
+      </trans-unit>
+      <trans-unit id="Item2DataLabel" datatype="html">
+        <source>ITEM 2</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <note priority="1" from="description">Displaying the item2 Label</note>
+        <note priority="1" from="meaning">Data Label</note>
+      </trans-unit>
+      <trans-unit id="searchPlaceholder" datatype="html">
+        <source>Search for product</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/input-search/input-search.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Placeholder for search input</note>
+        <note priority="1" from="meaning">Placeholder</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

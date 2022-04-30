@@ -1,0 +1,67 @@
+<mat-toolbar class="title-toolbar">
+    <mat-toolbar-row>
+        <span class="title-center" i18n="Title Toolbar|Title for the comparator page@@comparatorTitleToolbar">Product Comparison</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-toolbar class="{{this.itemsService.itemsSelected.length < 2 ? 'toggle-show' : 'toggle-hide'}}">
+    <mat-toolbar-row class="mat-toolbar-input-search">
+        <app-input-search (textChange)="onTextChange($event)" (textClear)="onTextClear()" debounceTime=200></app-input-search>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<cdk-virtual-scroll-viewport #scroller itemSize="72" class="content {{this.itemsService.itemsSelected.length < 2 ? 'toggle-show' : 'toggle-hide'}}">
+    <mat-list>
+        <ng-container *cdkVirtualFor="let item of this.itemsService.items">
+            <mat-list-item>
+                <img matListAvatar [src]="item.thumbnail">
+                <div class="mat-list-item-item">{{item.title}}</div>
+                <button mat-raised-button (click)="selectToCompare(item)" i18n="Button|Button for selecting to compare@@compareButton">Compare
+                </button>
+                <mat-divider></mat-divider>
+            </mat-list-item>
+        </ng-container>
+    </mat-list>
+</cdk-virtual-scroll-viewport>
+    
+<div class="product-comparison-list-b-{{this.itemsService.items.length > 0 ? 1 : 0}}">
+    <mat-list>
+        <ng-container *ngFor="let item of this.itemsService.itemsSelected; let i = index">
+            <mat-list-item class="xproduct-comparison-list-item-color-{{i}}">
+                <img matListAvatar [src]="item.thumbnail">
+                <h3 matLine> <b><span i18n="Label|Label to indicate the item was selected@@itemLabel">ITEM</span> {{i+1}} <span i18n="Label|Label to indicate the item was selected@@selectedLabel">SELECTED</span> :</b> {{item.title}} </h3>
+                <button mat-icon-button (click)="removeSelectedItem(item)">
+                    <mat-icon>close</mat-icon>
+                </button>
+                <mat-divider></mat-divider>
+            </mat-list-item>
+        </ng-container>
+    </mat-list>
+    <div class="product-comparison-list-buttons-b">
+        <div class="product-comparison-list-status" *ngIf="this.itemsService.itemsSelected.length === 0" i18n="Warning Text|Warning when there are no items selected@@warningNoItemsSelected">
+            No item selected for comparison
+        </div>
+    </div>
+</div>
+    
+<cdk-virtual-scroll-viewport itemSize="72" class="comparison-report-virtual-scroll-b" *ngIf="this.itemsService.itemsSelected.length > 1">
+    <table>
+        <caption i18n="Table Title|Title for comparison table@@comparisonTableTitle">Features</caption>
+        <thead>
+            <tr>
+                <th scope="col" i18n="Table Header|Field Name for comparion Table@@tableFieldNameHeaderFeature">Feature</th>
+                <th scope="col" i18n="Table Header|Field Name for comparion Table@@tableFieldNameHeaderItem1">ITEM 1</th>
+                <th scope="col" i18n="Table Header|Field Name for comparion Table@@tableFieldNameHeaderItem2">ITEM 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let attr of this.itemsService.inflatedAttributesProductA; let i = index">
+                <tr>
+                    <td scope="row" data-label="Feature" i18n-data-label="Data Label|Displaying the feature Label@@featureDataLabel">{{attr.name}}</td>
+                    <td data-label="ITEM 1" i18n-data-label="Data Label|Displaying the item1 Label@@Item1DataLabel">{{attr.value_name}}</td>
+                    <td data-label="ITEM 2" i18n-data-label="Data Label|Displaying the item2 Label@@Item2DataLabel">{{this.itemsService.inflatedAttributesProductB[i].value_name}}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</cdk-virtual-scroll-viewport>
