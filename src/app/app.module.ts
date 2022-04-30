@@ -17,14 +17,20 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorService } from './loader/interceptor.service';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { InputSearchComponent } from './input-search/input-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    InputSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +45,13 @@ import { HomeComponent } from './home/home.component';
     MatListModule,
     MatSliderModule,
     MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatFormFieldModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

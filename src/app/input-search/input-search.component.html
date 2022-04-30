@@ -1,0 +1,10 @@
+<mat-form-field class="input-search-form-field" mat>
+    <input matInput type="text" placeholder="Search for product" i18n-placeholder="Placeholder|Placeholder for search input@@searchPlaceholder" [(ngModel)]="value" (input)="onInput($event)">
+    <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Limpar" (click)="value='';this.textClear.emit();">
+      <mat-icon>close</mat-icon>
+    </button>
+</mat-form-field>
+  
+<!-- Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
