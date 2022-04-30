@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import { LoaderService } from '../loader/loader.service';
+import { LoaderService } from '../shared/services/loader.service';
 
 @Component({
   selector: 'app-nav',
