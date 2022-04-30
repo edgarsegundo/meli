@@ -12,10 +12,8 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$meli-primary: mat.define-palette(mat.$indigo-palette);
-$meli-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-
-// The warn palette is optional (defaults to red).
+$meli-primary: mat.define-palette(mat.$yellow-palette);
+$meli-accent: mat.define-palette(mat.$indigo-palette, A200, A100, A400);
 $meli-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
@@ -32,6 +30,23 @@ $meli-theme: mat.define-light-theme((
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($meli-theme);
+
+// for dark theme
+$meli-primary-dark: mat.define-palette(mat.$orange-palette);
+$meli-accent-dark: mat.define-palette(mat.$yellow-palette, A200, A100, A400);
+$meli-warn-dark: mat.define-palette(mat.$red-palette);
+
+$meli-theme-dark: mat.define-dark-theme((
+  color: (
+    primary: $meli-primary-dark,
+    accent: $meli-accent-dark,
+    warn: $meli-warn-dark,
+  )
+));
+
+.dark-theme-mode {
+  @include mat.all-component-themes($meli-theme-dark);
+}
 
 /* You can add global styles to this file, and also import other style files */
 
