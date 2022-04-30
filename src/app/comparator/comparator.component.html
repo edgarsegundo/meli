@@ -16,8 +16,7 @@
             <mat-list-item>
                 <img matListAvatar [src]="item.thumbnail">
                 <div class="mat-list-item-item">{{item.title}}</div>
-                <button mat-raised-button (click)="selectToCompare(item)" i18n="Button|Button for selecting to compare@@compareButton">Compare
-                </button>
+                <button mat-raised-button class="compare-button" (click)="selectToCompare(item)" i18n="Button|Button for selecting to compare@@compareButton">Compare</button>
                 <mat-divider></mat-divider>
             </mat-list-item>
         </ng-container>

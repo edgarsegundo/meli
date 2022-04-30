@@ -2,6 +2,8 @@ import { Component, OnInit, ChangeDetectionStrategy, ViewChild, AfterViewInit, N
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
 import { map, pairwise, filter, throttleTime } from 'rxjs/operators';
 import { ItemsService } from '../shared/item/items.service';
+import { Item } from '../shared/item/item';
+import { NotifierService } from '../shared/services/notifier.service';
 
 @Component({
   selector: 'app-comparator',
@@ -16,7 +18,7 @@ export class ComparatorComponent implements OnInit, AfterViewInit {
   offset = 0;
   query = '';
 
-  constructor(private ngZone: NgZone, public itemsService: ItemsService) {
+  constructor(private ngZone: NgZone, public itemsService: ItemsService, private notifierService: NotifierService) {
   }
 
   ngOnInit(): void {
@@ -51,7 +53,13 @@ export class ComparatorComponent implements OnInit, AfterViewInit {
   }
 
   selectToCompare(item:any) {
+    if (this.itemsService.itemsSelected.findIndex(elem => elem.id === item.id) !== -1) {
+      this.notifierService.showNotification("This item is already selected!", "Dismiss");
+      return;
+    }
+
     this.itemsService.addSelection(item);
+
     if(this.itemsService.itemsSelected.length > 1) {
       this.itemsService.buildComparisonReport();
     }
