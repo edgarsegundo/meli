@@ -59,9 +59,6 @@ export class ItemsService {
       return row;
     }
 
-
-    
-
     arrayUnique(array:any[]) {
       var a = array.concat();
       for(var i = 0; i < a.length; ++i) {

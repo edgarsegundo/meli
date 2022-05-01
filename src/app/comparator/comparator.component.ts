@@ -2,7 +2,6 @@ import { Component, OnInit, ChangeDetectionStrategy, ViewChild, AfterViewInit, N
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
 import { map, pairwise, filter, throttleTime } from 'rxjs/operators';
 import { ItemsService } from '../shared/item/items.service';
-import { Item } from '../shared/item/item';
 import { NotifierService } from '../shared/services/notifier.service';
 
 @Component({
@@ -31,8 +30,7 @@ export class ComparatorComponent implements OnInit, AfterViewInit {
     this.scroller.elementScrolled().pipe(
       map(() => this.scroller.measureScrollOffset('bottom')),
       pairwise(),
-      //filter(([y1, y2]) => (y2 < y1 && y2 < 50)),
-      filter(([y1, y2]) => (y2 < 140)),
+      filter(([y1, y2]) => (y2 < y1 && y2 < 140)),
       throttleTime(200)
     ).subscribe(() => {
       this.ngZone.run(() => {
