@@ -3,6 +3,7 @@ import { ItemRestApiService } from './item-rest-api.service';
 import { Item } from './item';
 import { ItemAttribute } from './item-attribute';
 import { Result } from './result';
+import { ItemVsItem } from './item-vs-item';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,7 @@ export class ItemsService {
   itemsSelected: Item[] = [];
   inflatedAttributesProductA:ItemAttribute[] = [];
   inflatedAttributesProductB:ItemAttribute[] = [];
+  report: ItemVsItem[] = [];
 
   constructor(public restApi: ItemRestApiService) {}
   
@@ -32,6 +34,22 @@ export class ItemsService {
       }
     }
 
+    buildReport() {
+      this.report.length = 0;
+
+      // just in case the attributes are not ordered by id
+      this.itemsSelected[0].attributes.sort((a, b) => a.id.localeCompare(b.id));
+      this.itemsSelected[1].attributes.sort((a, b) => a.id.localeCompare(b.id));
+
+      let ids0:string[] = this.itemsSelected[0].attributes.map(function(item) { return item.id; });
+      let ids1:string[] = this.itemsSelected[1].attributes.map(function(item) { return item.id; });
+      let uniqueAndMergedIds:string[] = this.arrayUnique(ids0.concat(ids1));
+
+      uniqueAndMergedIds.forEach((id) => {
+        this.report.push(this.createRow(id));
+      });
+    }
+    
     buildComparisonReport() {
       this.inflatedAttributesProductA.length = 0;
       this.inflatedAttributesProductB.length = 0;
@@ -63,6 +81,18 @@ export class ItemsService {
 
     findItemAttrIndex(id:string, arr:ItemAttribute[]): number {
       return arr.findIndex((item) => item.id === id);
+    }
+
+
+    createRow(id:string) : ItemVsItem {
+      let index0:number = this.findItemAttrIndex(id, this.itemsSelected[0].attributes);
+      let index1:number = this.findItemAttrIndex(id, this.itemsSelected[1].attributes);
+      let row:ItemVsItem = {
+        feature: id,
+        item_1_value_name: index0 === -1 ? "- - - - -" : this.itemsSelected[0].attributes[index0].value_name,
+        item_2_value_name: index1 === -1 ? "- - - - -" : this.itemsSelected[1].attributes[index1].value_name,
+      };
+      return row;
     }
 
     insertItemAttr(id:string, inflatedAttributes:ItemAttribute[], itemsProductA:ItemAttribute[], itemsProductB:ItemAttribute[]) {

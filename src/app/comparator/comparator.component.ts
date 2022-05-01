@@ -14,6 +14,8 @@ import { NotifierService } from '../shared/services/notifier.service';
 export class ComparatorComponent implements OnInit, AfterViewInit {
   @ViewChild('scroller') scroller!: CdkVirtualScrollViewport;
 
+  displayedColumns: string[] = ['feature', 'item_1_value_name', 'item_2_value_name'];
+
   limit = 20;
   offset = 0;
   query = '';
@@ -61,7 +63,8 @@ export class ComparatorComponent implements OnInit, AfterViewInit {
     this.itemsService.addSelection(item);
 
     if(this.itemsService.itemsSelected.length > 1) {
-      this.itemsService.buildComparisonReport();
+      // this.itemsService.buildComparisonReport();
+      this.itemsService.buildReport();
     }
   }
 

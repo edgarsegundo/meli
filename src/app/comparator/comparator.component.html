@@ -43,8 +43,8 @@
     </div>
 </div>
     
-<cdk-virtual-scroll-viewport itemSize="72" class="comparison-report-virtual-scroll-b" *ngIf="this.itemsService.itemsSelected.length > 1">
-    <table>
+<!-- <cdk-virtual-scroll-viewport itemSize="72" class="comparison-report-virtual-scroll-b" *ngIf="this.itemsService.itemsSelected.length > 1">
+    <table mat>
         <caption i18n="Table Title|Title for comparison table@@comparisonTableTitle">Features</caption>
         <thead>
             <tr>
@@ -63,4 +63,41 @@
             </ng-container>
         </tbody>
     </table>
+</cdk-virtual-scroll-viewport> -->
+
+
+<cdk-virtual-scroll-viewport itemSize="72" class="comparison-report-virtual-scroll-b" *ngIf="this.itemsService.itemsSelected.length > 1">
+<div class="example-container">
+    <table mat-table matSort matTableResponsive [dataSource]="this.itemsService.report" >
+  
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+  
+      <!-- Feature Column -->
+      <ng-container matColumnDef="feature">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Feature </th>
+        <td data-column-name="FEATURE" mat-cell *matCellDef="let element"> {{element.feature}} </td>
+        <!-- ⚙️ ▫️ ➙-->
+      </ng-container>
+  
+      <!-- Item 1 Column -->
+      <ng-container matColumnDef="item_1_value_name">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Item 1 </th>
+        <td data-column-name="ITEM 1" mat-cell *matCellDef="let element"> {{element.item_1_value_name}} </td>
+      </ng-container>
+  
+      <!-- Item 2 Column -->
+      <ng-container matColumnDef="item_2_value_name">
+        <th mat-header-cell *matHeaderCellDef> Item 2 </th>
+        <td data-column-name="ITEM 2" mat-cell *matCellDef="let element"> {{element.item_2_value_name}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
 </cdk-virtual-scroll-viewport>
+  
+  <!-- Copyright 2019 Google LLC. All Rights Reserved.
+      Use of this source code is governed by an MIT-style license that
+      can be found in the LICENSE file at http://angular.io/license -->
