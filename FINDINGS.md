@@ -13,6 +13,10 @@ ng generate @angular/material:navigation nav
 https://docs.npmjs.com/about-semantic-versioning
 
 
+- - - How to make an Angular Material table responsive
+https://stackoverflow.com/questions/31707747/how-to-make-an-angular-material-table-responsive
+https://stackblitz.com/edit/material-table-responsive?file=src%2Fapp%2Ftable-basic-example.css
+
 https://namitamalik.github.io/throttleTime-vs-debounceTime-in-RxJS/
 
 https://stackoverflow.com/questions/38213926/interface-for-associative-object-array-in-typescript

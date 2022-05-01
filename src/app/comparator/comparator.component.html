@@ -1,9 +1,3 @@
-<!-- <mat-toolbar class="title-toolbar">
-    <mat-toolbar-row>
-        <span class="title-center" i18n="Title Toolbar|Title for the comparator page@@comparatorTitleToolbar">Product Comparison</span>
-    </mat-toolbar-row>
-</mat-toolbar> -->
-
 <mat-toolbar class="{{this.itemsService.itemsSelected.length < 2 ? 'toggle-show' : 'toggle-hide'}}">
     <mat-toolbar-row class="mat-toolbar-input-search">
         <app-input-search (textChange)="onTextChange($event)" (textClear)="onTextClear()" debounceTime=200></app-input-search>
@@ -22,11 +16,11 @@
         </ng-container>
     </mat-list>
 </cdk-virtual-scroll-viewport>
-    
+
 <div class="product-comparison-list-b-{{this.itemsService.items.length > 0 ? 1 : 0}}">
     <mat-list>
         <ng-container *ngFor="let item of this.itemsService.itemsSelected; let i = index">
-            <mat-list-item class="xproduct-comparison-list-item-color-{{i}}">
+            <mat-list-item>
                 <img matListAvatar [src]="item.thumbnail">
                 <h3 matLine> <b><span i18n="Label|Label to indicate the item was selected@@itemLabel">ITEM</span> {{i+1}} <span i18n="Label|Label to indicate the item was selected@@selectedLabel">SELECTED</span> :</b> {{item.title}} </h3>
                 <button mat-icon-button (click)="removeSelectedItem(item)">
@@ -42,18 +36,14 @@
         </div>
     </div>
 </div>
-
 <br>
-<!-- <caption i18n="Table Title|Title for comparison table@@comparisonTableTitle">Features</caption>   -->
-<!-- <h3 i18n="Table Title|Title for comparison table@@comparisonTableTitle">⚖️ FEATURE COMPARISON</h3> -->
+
 <cdk-virtual-scroll-viewport itemSize="72" class="comparison-report-virtual-scroll-b" *ngIf="this.itemsService.itemsSelected.length > 1">
     <div class="example-container">
         <table mat-table matSort matTableResponsive [dataSource]="this.itemsService.report" >
-        <!--- Note that these columns can be defined in any order.
-                The actual rendered columns are set as a property on the row definition" -->
-    
+
         <!-- Feature Column -->
-        <ng-container matColumnDef="feature">
+        <ng-container matColumnDef="feature" i18n-matColumnDef="Mat Column Definition|Column Definition for the feature header@@featureMatColumnDef">
             <th mat-header-cell mat-sort-header *matHeaderCellDef>⚙️ FEATURE </th>
             <td data-column-name="FEATURE" style="font-weight: bold;" mat-cell *matCellDef="let element"> {{element.feature}} </td>
             <!-- ⚙️ ▫️ ➙-->

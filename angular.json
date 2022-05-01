@@ -16,6 +16,15 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "pt-BR": {
+            "translation": "src/locale/messages.pt-BR.xlf",
+            "baseHref": ""
+          }
+        }
+      },      
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -57,6 +66,11 @@
               ],
               "outputHashing": "all"
             },
+            "pt-BR": {
+              "localize": ["pt-BR"],
+              "outputPath": "dist/meli-pt-BR/",
+              "i18nMissingTranslation": "error"
+            },
             "development": {
               "buildOptimizer": false,
               "optimization": false,
@@ -74,6 +88,9 @@
             "production": {
               "browserTarget": "meli:build:production"
             },
+            "pt-BR": {
+              "browserTarget": "meli:build:pt-BR"
+            },            
             "development": {
               "browserTarget": "meli:build:development"
             }

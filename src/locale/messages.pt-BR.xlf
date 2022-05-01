@@ -3,7 +3,7 @@
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="aboutAuthor" datatype="html">
-        <source>Developed by Edgar Rezende de Paula</source>
+        <source>Desenvolvido por Edgar Rezende de Paula</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.component.html</context>
           <context context-type="linenumber">1</context>
@@ -12,7 +12,7 @@
         <note priority="1" from="meaning">About</note>
       </trans-unit>
       <trans-unit id="compareButton" datatype="html">
-        <source>Compare</source>
+        <source>Comparar</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/comparator/comparator.component.html</context>
           <context context-type="linenumber">13</context>
@@ -30,7 +30,7 @@
         <note priority="1" from="meaning">Label</note>
       </trans-unit>
       <trans-unit id="selectedLabel" datatype="html">
-        <source>SELECTED</source>
+        <source>SELECIONADO</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/comparator/comparator.component.html</context>
           <context context-type="linenumber">25</context>
@@ -39,7 +39,7 @@
         <note priority="1" from="meaning">Label</note>
       </trans-unit>
       <trans-unit id="warningNoItemsSelected" datatype="html">
-        <source> No item selected for comparison </source>
+        <source>Nenhum item selecionado para comparação</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/comparator/comparator.component.html</context>
           <context context-type="linenumber">34,36</context>
@@ -48,7 +48,7 @@
         <note priority="1" from="meaning">Warning Text</note>
       </trans-unit>
       <trans-unit id="featureMatColumnDef" datatype="html">
-        <source>feature</source>
+        <source>Característica</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/comparator/comparator.component.html</context>
           <context context-type="linenumber">46</context>
@@ -57,7 +57,7 @@
         <note priority="1" from="meaning">Mat Column Definition</note>
       </trans-unit>
       <trans-unit id="searchPlaceholder" datatype="html">
-        <source>Search for product</source>
+        <source>Buscar por produto</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/input-search/input-search.component.html</context>
           <context context-type="linenumber">2</context>
@@ -66,7 +66,7 @@
         <note priority="1" from="meaning">Placeholder</note>
       </trans-unit>
       <trans-unit id="routerLinkComparator" datatype="html">
-        <source>Product Comparator</source>
+        <source>Comparador de Produtos</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/nav/nav.component.html</context>
           <context context-type="linenumber">8,9</context>
@@ -75,7 +75,7 @@
         <note priority="1" from="meaning">Router Link</note>
       </trans-unit>
       <trans-unit id="aboutLinkComparator" datatype="html">
-        <source>About</source>
+        <source>Sobre</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/nav/nav.component.html</context>
           <context context-type="linenumber">9,12</context>
@@ -84,7 +84,7 @@
         <note priority="1" from="meaning">Router Link</note>
       </trans-unit>
       <trans-unit id="titleNavPage" datatype="html">
-        <source>Mercado Livre (Technical Challenge)</source>
+        <source>Mercado Livre (Desafio Técnico)</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/nav/nav.component.html</context>
           <context context-type="linenumber">25,27</context>
