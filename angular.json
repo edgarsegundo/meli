@@ -68,7 +68,7 @@
             },
             "pt-BR": {
               "localize": ["pt-BR"],
-              "outputPath": "dist/meli-pt-BR/",
+              "outputPath": "dist/meli/",
               "i18nMissingTranslation": "error"
             },
             "development": {

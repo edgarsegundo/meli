@@ -20,9 +20,9 @@ Run `docker container run -d -p 4200:3006 edgarsegundo/meli:1.0`
 
 ## Screenshots
 
-![Screenshot](assets/screenshot1.png)
+![screenshot1](https://user-images.githubusercontent.com/13165550/166167933-6373a1c2-7d2e-46c0-9d73-3e337c80520d.png)
 
-![Screenshot](assets/screenshot2.png)
+![screenshot2](https://user-images.githubusercontent.com/13165550/166167953-c597a951-ce68-407e-8b73-b62fbef13ae3.png)
 
 ## Desirable features
 
@@ -40,4 +40,4 @@ Run `docker container run -d -p 4200:3006 edgarsegundo/meli:1.0`
 
 - App published with Nginx in a VPS with Ubuntu
 
-- Automated testing with Cypress for End-to-End Testing and Jasmine and Karma | Mosh for Unit and Intergration testing (future implementation)
+- Automated testing with Cypress for End-to-End Testing, Jasmine and Karma | Mosh for Unit and Integration testing (pending future implementation)
