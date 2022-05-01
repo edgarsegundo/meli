@@ -47,14 +47,14 @@
         <note priority="1" from="description">Warning when there are no items selected</note>
         <note priority="1" from="meaning">Warning Text</note>
       </trans-unit>
-      <trans-unit id="featureMatColumnDef" datatype="html">
-        <source>feature</source>
+      <trans-unit id="featureDataColumnName" datatype="html">
+        <source>FEATURE</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/comparator/comparator.component.html</context>
-          <context context-type="linenumber">46</context>
+          <context context-type="linenumber">48</context>
         </context-group>
-        <note priority="1" from="description">Column Definition for the feature header</note>
-        <note priority="1" from="meaning">Mat Column Definition</note>
+        <note priority="1" from="description">Column name for feature header</note>
+        <note priority="1" from="meaning">Data Column</note>
       </trans-unit>
       <trans-unit id="searchPlaceholder" datatype="html">
         <source>Search for product</source>

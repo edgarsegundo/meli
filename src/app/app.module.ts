@@ -25,7 +25,6 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { NavComponent } from './nav/nav.component';
-import { HomeComponent } from './home/home.component';
 import { InputSearchComponent } from './input-search/input-search.component';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -37,7 +36,6 @@ import { ComparatorComponent } from './comparator/comparator.component';
   declarations: [
     AppComponent,
     NavComponent,
-    HomeComponent,
     InputSearchComponent,
     AboutComponent,
     ComparatorComponent,

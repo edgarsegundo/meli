@@ -43,9 +43,9 @@
         <table mat-table matSort matTableResponsive [dataSource]="this.itemsService.report" >
 
         <!-- Feature Column -->
-        <ng-container matColumnDef="feature" i18n-matColumnDef="Mat Column Definition|Column Definition for the feature header@@featureMatColumnDef">
+        <ng-container matColumnDef="feature">
             <th mat-header-cell mat-sort-header *matHeaderCellDef>⚙️ FEATURE </th>
-            <td data-column-name="FEATURE" style="font-weight: bold;" mat-cell *matCellDef="let element"> {{element.feature}} </td>
+            <td data-column-name="FEATURE" i18n-data-column-name="Data Column|Column name for feature header@@featureDataColumnName" mat-cell *matCellDef="let element"> {{element.feature}} </td>
             <!-- ⚙️ ▫️ ➙-->
         </ng-container>
     
