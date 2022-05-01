@@ -1,8 +1,8 @@
-<mat-toolbar class="title-toolbar">
+<!-- <mat-toolbar class="title-toolbar">
     <mat-toolbar-row>
         <span class="title-center" i18n="Title Toolbar|Title for the comparator page@@comparatorTitleToolbar">Product Comparison</span>
     </mat-toolbar-row>
-</mat-toolbar>
+</mat-toolbar> -->
 
 <mat-toolbar class="{{this.itemsService.itemsSelected.length < 2 ? 'toggle-show' : 'toggle-hide'}}">
     <mat-toolbar-row class="mat-toolbar-input-search">
@@ -42,62 +42,40 @@
         </div>
     </div>
 </div>
-    
-<!-- <cdk-virtual-scroll-viewport itemSize="72" class="comparison-report-virtual-scroll-b" *ngIf="this.itemsService.itemsSelected.length > 1">
-    <table mat>
-        <caption i18n="Table Title|Title for comparison table@@comparisonTableTitle">Features</caption>
-        <thead>
-            <tr>
-                <th scope="col" i18n="Table Header|Field Name for comparion Table@@tableFieldNameHeaderFeature">Feature</th>
-                <th scope="col" i18n="Table Header|Field Name for comparion Table@@tableFieldNameHeaderItem1">ITEM 1</th>
-                <th scope="col" i18n="Table Header|Field Name for comparion Table@@tableFieldNameHeaderItem2">ITEM 2</th>
-            </tr>
-        </thead>
-        <tbody>
-            <ng-container *ngFor="let attr of this.itemsService.inflatedAttributesProductA; let i = index">
-                <tr>
-                    <td scope="row" data-label="Feature" i18n-data-label="Data Label|Displaying the feature Label@@featureDataLabel">{{attr.name}}</td>
-                    <td data-label="ITEM 1" i18n-data-label="Data Label|Displaying the item1 Label@@Item1DataLabel">{{attr.value_name}}</td>
-                    <td data-label="ITEM 2" i18n-data-label="Data Label|Displaying the item2 Label@@Item2DataLabel">{{this.itemsService.inflatedAttributesProductB[i].value_name}}</td>
-                </tr>
-            </ng-container>
-        </tbody>
-    </table>
-</cdk-virtual-scroll-viewport> -->
 
-
+<br>
+<!-- <caption i18n="Table Title|Title for comparison table@@comparisonTableTitle">Features</caption>   -->
+<!-- <h3 i18n="Table Title|Title for comparison table@@comparisonTableTitle">⚖️ FEATURE COMPARISON</h3> -->
 <cdk-virtual-scroll-viewport itemSize="72" class="comparison-report-virtual-scroll-b" *ngIf="this.itemsService.itemsSelected.length > 1">
-<div class="example-container">
-    <table mat-table matSort matTableResponsive [dataSource]="this.itemsService.report" >
-  
-      <!--- Note that these columns can be defined in any order.
-            The actual rendered columns are set as a property on the row definition" -->
-  
-      <!-- Feature Column -->
-      <ng-container matColumnDef="feature">
-        <th mat-header-cell mat-sort-header *matHeaderCellDef> Feature </th>
-        <td data-column-name="FEATURE" mat-cell *matCellDef="let element"> {{element.feature}} </td>
-        <!-- ⚙️ ▫️ ➙-->
-      </ng-container>
-  
-      <!-- Item 1 Column -->
-      <ng-container matColumnDef="item_1_value_name">
-        <th mat-header-cell mat-sort-header *matHeaderCellDef> Item 1 </th>
-        <td data-column-name="ITEM 1" mat-cell *matCellDef="let element"> {{element.item_1_value_name}} </td>
-      </ng-container>
-  
-      <!-- Item 2 Column -->
-      <ng-container matColumnDef="item_2_value_name">
-        <th mat-header-cell *matHeaderCellDef> Item 2 </th>
-        <td data-column-name="ITEM 2" mat-cell *matCellDef="let element"> {{element.item_2_value_name}} </td>
-      </ng-container>
-  
-      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
-</div>
+    <div class="example-container">
+        <table mat-table matSort matTableResponsive [dataSource]="this.itemsService.report" >
+        <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+    
+        <!-- Feature Column -->
+        <ng-container matColumnDef="feature">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef>⚙️ FEATURE </th>
+            <td data-column-name="FEATURE" style="font-weight: bold;" mat-cell *matCellDef="let element"> {{element.feature}} </td>
+            <!-- ⚙️ ▫️ ➙-->
+        </ng-container>
+    
+        <!-- Item 1 Column -->
+        <ng-container matColumnDef="item_1_value_name">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef>📦 ITEM 1 </th>
+            <td data-column-name="ITEM 1" mat-cell *matCellDef="let element"> {{element.item_1_value_name}} </td>
+        </ng-container>
+    
+        <!-- Item 2 Column -->
+        <ng-container matColumnDef="item_2_value_name">
+            <th mat-header-cell *matHeaderCellDef>📦 ITEM 2 </th>
+            <td data-column-name="ITEM 2" mat-cell *matCellDef="let element"> {{element.item_2_value_name}} </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+<!-- Copyright 2019 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
+    </div>
 </cdk-virtual-scroll-viewport>
-  
-  <!-- Copyright 2019 Google LLC. All Rights Reserved.
-      Use of this source code is governed by an MIT-style license that
-      can be found in the LICENSE file at http://angular.io/license -->

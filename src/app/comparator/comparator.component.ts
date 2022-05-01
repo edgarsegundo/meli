@@ -63,8 +63,7 @@ export class ComparatorComponent implements OnInit, AfterViewInit {
     this.itemsService.addSelection(item);
 
     if(this.itemsService.itemsSelected.length > 1) {
-      // this.itemsService.buildComparisonReport();
-      this.itemsService.buildReport();
+      this.itemsService.buildComparisonReport();
     }
   }
 
