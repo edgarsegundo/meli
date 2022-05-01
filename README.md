@@ -1,21 +1,43 @@
-# (Me)rcado (li)vre Technical Challenge 
+## (Me)rcado (li)vre Technical Challenge 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3 and it is for demonstration purposes only.
 
-## How to run it
+## See it in action
 
-download the image
-docker container run -d -p 4200:3006 edgarsegundo/meli:1.0
+See a [live](https://p2digital.com.br/) demo of the app.
 
-## Development server
+## How to run through docker | Pre-requisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Make sure you have `docker` [installed](https://docs.docker.com/desktop/windows/install/).
 
-## Build
+## Running
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `docker pull edgarsegundo/meli:1.0@sha256:9b63804bae2bab2bb4fba499ea7dfb4d4affd01b3f4692a4de4f51b6bb57e83a`
 
-## Running unit tests
+Run `docker container run -d -p 4200:3006 edgarsegundo/meli:1.0`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+> Note: the application runs off http://localhost:4200/
 
+## Screenshots
+
+![Screenshot](assets/screenshot1.png)
+
+![Screenshot](assets/screenshot2.png)
+
+## Desirable features
+
+- Pagination using infinite scroll
+
+- Error handling using Interceptor
+
+- Responsive screen (mobile-friendly) implemented
+
+- internationalization implemented using i18n in Angular
+
+- Light/dark theme implemented using Material
+
+- Docker implemented
+
+- App published with Nginx in a VPS with Ubuntu
+
+- Automated testing with Cypress for End-to-End Testing and Jasmine and Karma | Mosh for Unit and Intergration testing (future implementation)
