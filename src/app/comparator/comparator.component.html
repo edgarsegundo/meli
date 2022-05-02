@@ -1,5 +1,5 @@
-<mat-toolbar class="{{this.itemsService.itemsSelected.length < 2 ? 'toggle-show' : 'toggle-hide'}}">
-    <mat-toolbar-row class="mat-toolbar-input-search">
+<mat-toolbar class="mat-toolbar-input-search {{this.itemsService.itemsSelected.length < 2 ? 'toggle-show' : 'toggle-hide'}}">
+    <mat-toolbar-row class="mat-toolbar-row-input-search">
         <app-input-search (textChange)="onTextChange($event)" (textClear)="onTextClear()" debounceTime=200></app-input-search>
     </mat-toolbar-row>
 </mat-toolbar>

@@ -55,8 +55,14 @@
     width: 100%;
 }
 
+.mat-toolbar-input-search-row {
+    width: 30%;
+    padding-left: 1rem;
+    font-size: large;
+}
+
 .mat-toolbar-input-search {
-    height: 100%;
+    padding-bottom: 5rem;
 }
 
 .comparison-report-virtual-scroll-b {
