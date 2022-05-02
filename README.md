@@ -6,17 +6,19 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 See a [live](https://p2digital.com.br/) demo of the app.
 
-## How to run through docker | Pre-requisites
+## Running using Docker
 
-Make sure you have `docker` [installed](https://docs.docker.com/desktop/windows/install/).
+Pre-requisites : Make sure you have `docker` [installed](https://docs.docker.com/desktop/windows/install/).
 
-## Running
-
-Run `docker pull edgarsegundo/meli:1.0@sha256:9b63804bae2bab2bb4fba499ea7dfb4d4affd01b3f4692a4de4f51b6bb57e83a`
+Run `docker pull edgarsegundo/meli:1.0@sha256:bcac0b2ee3e5467f927cb1bfb8811c7901eab604c68469b1afa2f77e95f7b85f`
 
 Run `docker container run -d -p 4200:3006 edgarsegundo/meli:1.0`
 
 > Note: the application runs off http://localhost:4200/
+
+## Angular Internationalization
+
+npm run start:pt-BR -- --port=4201
 
 ## Screenshots
 
@@ -34,7 +36,7 @@ Run `docker container run -d -p 4200:3006 edgarsegundo/meli:1.0`
 
 - internationalization implemented using i18n in Angular
 
-- Light/dark theme implemented using Material
+- Light/dark theme implemented using Angular Material
 
 - Docker implemented
 
