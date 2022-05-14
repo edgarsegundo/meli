@@ -10,7 +10,7 @@
             <mat-list-item>
                 <img matListAvatar [src]="item.thumbnail">
                 <div class="mat-list-item-item">{{item.title}}</div>
-                <button mat-raised-button class="compare-button" (click)="selectToCompare(item)" i18n="Button|Button for selecting to compare@@compareButton">Compare</button>
+                <button mat-raised-button class="compare-button" (click)="selectToCompare(item)" i18n="Button|Button for selecting to compare@@compareButton">Comparar</button>
                 <mat-divider></mat-divider>
             </mat-list-item>
         </ng-container>
@@ -22,7 +22,7 @@
         <ng-container *ngFor="let item of this.itemsService.itemsSelected; let i = index">
             <mat-list-item>
                 <img matListAvatar [src]="item.thumbnail">
-                <h3 matLine> <b><span i18n="Label|Label to indicate the item was selected@@itemLabel">ITEM</span> {{i+1}} <span i18n="Label|Label to indicate the item was selected@@selectedLabel">SELECTED</span> :</b> {{item.title}} </h3>
+                <h3 matLine> <b><span i18n="Label|Label to indicate the item was selected@@itemLabel">ITEM</span> {{i+1}} <span i18n="Label|Label to indicate the item was selected@@selectedLabel">SELECIONADO</span> :</b> {{item.title}} </h3>
                 <button mat-icon-button (click)="removeSelectedItem(item)">
                     <mat-icon>close</mat-icon>
                 </button>
@@ -32,7 +32,7 @@
     </mat-list>
     <div class="product-comparison-list-buttons-b">
         <div class="product-comparison-list-status" *ngIf="this.itemsService.itemsSelected.length === 0" i18n="Warning Text|Warning when there are no items selected@@warningNoItemsSelected">
-            No item selected for comparison
+            Nenhum item selecionado para comparação
         </div>
     </div>
 </div>
@@ -45,7 +45,7 @@
         <!-- Feature Column -->
         <ng-container matColumnDef="feature">
             <th mat-header-cell mat-sort-header *matHeaderCellDef>⚙️ FEATURE </th>
-            <td data-column-name="FEATURE" i18n-data-column-name="Data Column|Column name for feature header@@featureDataColumnName" mat-cell *matCellDef="let element"> {{element.feature}} </td>
+            <td data-column-name="CARACTERÍSTICA" i18n-data-column-name="Data Column|Column name for feature header@@featureDataColumnName" mat-cell *matCellDef="let element"> {{element.feature}} </td>
             <!-- ⚙️ ▫️ ➙-->
         </ng-container>
     

@@ -1,5 +1,5 @@
 <mat-form-field class="input-search-form-field">
-    <input matInput type="text" placeholder="Search for product" i18n-placeholder="Placeholder|Placeholder for search input@@searchPlaceholder" [(ngModel)]="value" (input)="onInput($event)">
+    <input matInput type="text" placeholder="Buscar por produto" i18n-placeholder="Placeholder|Placeholder for search input@@searchPlaceholder" [(ngModel)]="value" (input)="onInput($event)">
     <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Limpar" (click)="value='';this.textClear.emit();">
       <mat-icon>close</mat-icon>
     </button>

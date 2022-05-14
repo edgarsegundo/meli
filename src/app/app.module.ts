@@ -31,6 +31,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './shared/services/interceptor.service';
 import { AboutComponent } from './about/about.component';
 import { ComparatorComponent } from './comparator/comparator.component';
+import { DialogueBuilderComponent } from './dialogue-builder/dialogue-builder.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ComparatorComponent } from './comparator/comparator.component';
     InputSearchComponent,
     AboutComponent,
     ComparatorComponent,
+    DialogueBuilderComponent,
   ],
   imports: [
     BrowserModule,
